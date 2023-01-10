@@ -1,0 +1,294 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Roboto-Black;
+    src: url(Roboto-Black.ttf);
+}
+body{
+    font-family: Roboto-Black;
+}
+:root{
+    --main-color:#0070cd;
+    --secondary-color:#f6f6f6;
+
+}
+.header{
+    background-color: var(--main-color) ;
+    /* height: 100px; */
+    padding: 20px ;
+    }
+    .header .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .header img {
+        height: 50px;
+        width: 200px;
+    }
+    .header li{
+        list-style: none;
+        display: inline-block;
+        margin-left: 5px;
+        color: white;
+    }
+    .header .links{
+        position: relative;
+    }
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: #333; */
+    
+}
+.main img{
+    width: 100px;
+}
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+.main-container {
+    width: 600px;
+    background-image: url(../images/Doctor_1_rounded_v2.png);
+    background-size: cover;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px){
+    .main-container {
+        width: 750px;
+        height: 375px;
+    }
+}
+@media (min-width:992px){
+    .main-container {
+        width: 970px;
+        height: 485px;
+    }
+}
+@media (min-width:1200px){
+    .main-container {
+        width: 1170px;
+        height: 585px;
+    }
+}
+.best-doctors{
+    display: grid;
+    grid-auto-rows: minmax(100px,auto);
+    grid-template-areas:"h1 h1 h1 h1 h1 h1 h1 h1 h1 h1"
+    "first-p . . . . . . . . second-p"
+    ;
+    color:var(--main-color);
+    margin-left: 100px;
+}
+
+.h1{
+    grid-area: h1;
+}
+.first-p{
+    grid-area: first-p;
+}
+.second-p{
+    grid-area: second-p;
+}
+.specialities{
+background-color: var(--main-color);
+color: white;
+width: 200px;
+padding: 15px;
+height: 50px;
+font-size: 25px;
+border-radius: 10px;
+margin-left: -10px;
+text-align: center;
+}
+.specialities:hover{
+    width:300px;
+    transition: 2s ease 0.3s ;
+    cursor: pointer;
+}
+.button{
+    background-color: #0070cd;
+    color: white;
+    text-align: center;
+    border-radius:10px;
+    width: 173px;
+    height: 62px;
+    transform: translate(536px, 174px);
+    line-height: 2.6;
+    font-size: 25px;
+    transform: translate(104px, 10px);
+}
+.clinics .dentistry img{
+
+    width:400px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 250px;
+}
+.clinics .dentistry .int{
+    width: 400px;
+    height: 250px;
+    background-color: #f6f6f6;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color:#0070cd;
+    padding: 15px;
+    margin-top:-15px
+}
+.clinics .neurology img{
+
+    width:400px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 250px;
+}
+.clinics .neurology .int{
+    width: 400px;
+    height: 250px;
+    background-color: #f6f6f6;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color:#0070cd;
+    padding: 15px;
+    margin-top:-15px
+}
+.clinics .cardiology img{
+
+    width:400px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 250px;
+}
+.clinics .cardiology .int{
+    width: 400px;
+    height: 250px;
+    background-color: #f6f6f6;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color:#0070cd;
+    padding: 15px;
+    margin-top:-15px
+}
+.clinics .internal img{
+
+    width:400px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 250px;
+}
+.clinics .internal .int{
+    width: 400px;
+    height: 250px;
+    background-color: #f6f6f6;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color:#0070cd;
+    padding: 15px;
+    margin-top:-15px
+}
+.clinics{
+    margin-left: 5px;
+    display: grid;
+    /* justify-content: space-around; */
+    grid-template-areas: " nav  dent dent  . neuro neuro  ld"
+    "nav sb button-dent . button-neuro sv ld"
+    " nav  cardio cardio  . internal internal  ld";
+
+    grid-gap:100px;
+    ;
+}
+.dentistry{
+    grid-area:dent
+}
+.neurology{
+    grid-area:neuro;
+}
+.cardiology{
+    grid-area:cardio;
+
+}
+.internal{
+    grid-area: internal;
+
+}
+.er{
+    grid-area: nav;
+    width:100px
+}
+.es{
+    grid-area: ld;
+    width: 100px;
+}
+.sb{
+    grid-area: sb;
+    width: 200px;
+}
+.sv{
+    grid-area: sv;
+    width: 200px;
+}
+.button-dent{
+    grid-area: button-dent;
+}.button-neuro{
+    grid-area: button-neuro;
+}.button-cardio{
+    grid-area: button-cardio;
+}.button-internal{
+    grid-area: button-internal;
+}
+.foot{
+    background-color: var(--main-color);
+    height: 300px;
+    transform:translate(0, 300px);
+}
+.foot img{
+    padding: 25px;
+}
+.foot li{
+    list-style: none;
+    color:white;
+    margin-bottom: 20px;
+}
+.foot .about{
+    color: white;
+    width:250px;
+    height:100px;
+    float: right;
+    text-align: center;
+    transform: translate(-14px, -116px);
+    width: max-content;
+}
+button{
+    position: absoloute;
+
+}
+.button:hover{
+    cursor: pointer;
+    transition: 1s 0.2s ease;
+    width: 200px;
+}
+.button:visited{
+    text-decoration: none;
+}
+a:visited{
+    color:white;
+    text-decoration: #0070cd;
+}

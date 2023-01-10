@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/Register.css">
+</head>
+<body>
+    <h1>REQUEST THE APPOINTMENT</h1>
+    <br>
+    <br>
+    <h3> Fill your information to confirm Reservation</h3>
+    <div class="login">
+        
+        <form  name="myform" action="#" method="POST" onsubmit="return Myfunction()">
+            <p>
+                <label>Name  <input type="text" name="name"></label>
+            </p>
+            <p>
+                <label>Phone <input type="phone" name="phone"></label>
+            </p>
+            <p>
+                <label>Email <input type="email" name="email"  /></label>
+            </p>
+            <label>Gender</label>
+            <input type = "radio" name = "gender" value = "Male"> Male
+                <input type = "radio" name = "gender" value = "Female"> Female
+                <p> 
+                    <button type="submit">Confirm</button>
+                </p>
+
+            <select name="" id="">
+            
+            </select>
+                
+        </form>
+    </div>
+    <br>
+    <script>
+            function Myfunction(){
+                var name= document.myform.name.value;  
+                var password= document.myform.phone.value; 
+                if (name==null || name==""){  
+                alert("Name can't be empty");   
+                } if(phone.length<11){  
+                alert("Phone must be at least 11");  
+                }  
+            }
+    </script>
+    </body>
+    
+</html>
+<html>

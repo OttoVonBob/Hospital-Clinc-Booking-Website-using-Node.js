@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet"  href="/stylesheets/confirm.css">
+</head>
+<body>
+    <h2>User Registeations:</h2>
+    <h3> users</h3>
+    <div class="login">
+    <form action="#" method="post">
+        <%
+            data.forEach(function(result){
+        %>
+    <p>
+        <label>Phone: <%= result.name %> </label> 
+    </p>
+    <p>
+        <label>Phone: <%= result.phone %></label>
+    </p>
+    <p>
+        <label>Email: <%= result.email %></label>
+    </p>
+    <p>
+        <label>Ticket Number: <%= result.ticket %></label>
+    </p>
+    <%
+        });
+    %>
+    <p>
+
+    </p>
+
+    </form>
+    
+    </div>
+
+    </body>
+ 
+</html>
